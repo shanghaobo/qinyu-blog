@@ -16,6 +16,7 @@
     "v-jsoneditor": "^1.2.3"
   },
   "devDependencies": {
-    "@vuepress/plugin-register-components": "^1.2.0"
+    "@vuepress/plugin-register-components": "^1.2.0",
+    "vuepress-plugin-baidu-autopush": "^1.0.1"
   }
 }
