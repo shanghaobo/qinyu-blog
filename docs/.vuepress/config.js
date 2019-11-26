@@ -3,6 +3,15 @@ module.exports = {
   description: 'Qinyu\'s blog',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     ['link', { rel: 'icon', href: '/logo.png' }], // 增加一个自定义的 favicon(网页标签的图标)
+    ['script', {}, `
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?78211cc0bb0086ea217533a8f283d678";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    `]
   ],
   base: '/', // 这是部署到github相关的配置
   markdown: {
