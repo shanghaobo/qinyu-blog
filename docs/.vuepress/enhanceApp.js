@@ -1,6 +1,12 @@
 
 import InfiniteSplitTableDemo from './components/InfiniteSplitTableDemo'
-
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?78211cc0bb0086ea217533a8f283d678";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 export default ({
     Vue, // VuePress 正在使用的 Vue 构造函数
     options, // 附加到根实例的一些选项
