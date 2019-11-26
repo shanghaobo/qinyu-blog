@@ -212,3 +212,43 @@ console.log(result);
 ```js
 1
 ```
+
+## Vuepress添加百度统计
+- config.js
+```js
+head: [ // 注入到当前页面的 HTML <head> 中的标签
+    ['script', {}, `
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxx";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    `]
+  ],
+```
+
+- enhanceApp.js
+```js
+export default ({
+    Vue, // VuePress 正在使用的 Vue 构造函数
+    options, // 附加到根实例的一些选项
+    router, // 当前应用的路由实例
+    siteData // 站点元数据
+  }) => {
+    // ...做一些其他的应用级别的优化
+    router.beforeEach((to, from, next) => {
+      // @pdai: 对每个页面点击添加百度统计
+      console.log('hmt=',typeof _hmt)
+      if(typeof _hmt!='undefined'){
+          if (to.path) {
+              _hmt.push(['_trackPageview', to.fullPath]);
+          }
+      }
+      
+      // continue
+      next();       
+  })
+  }
+```
