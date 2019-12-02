@@ -3,6 +3,11 @@ module.exports = {
   description: 'Qinyu\'s blog',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     ['link', { rel: 'icon', href: '/logo.png' }], // 增加一个自定义的 favicon(网页标签的图标)
+    // meta
+    ["meta", {name: "robots", content: "all"}],
+    ["meta", {name: "author", content: "秦羽"}],
+    ["meta", {name: "keywords", content: "Python笔记, Vue笔记, Linux笔记"}],
+
     ['script', {}, `
     var _hmt = _hmt || [];
     (function() {
