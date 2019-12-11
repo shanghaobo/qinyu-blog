@@ -64,3 +64,8 @@ python manage.py collectstatic
 for i,value in enumerate(['A', 'B', 'C']):
     print(i,value)
 ```
+
+## Python格式化当前时间
+```python
+now = time.strftime("%Y-%m-%d %H:%M:%S")
+```
