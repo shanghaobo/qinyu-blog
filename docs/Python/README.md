@@ -69,3 +69,6 @@ for i,value in enumerate(['A', 'B', 'C']):
 ```python
 now = time.strftime("%Y-%m-%d %H:%M:%S")
 ```
+
+## Python任务队列
+> celery
