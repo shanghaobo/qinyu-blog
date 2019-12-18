@@ -252,3 +252,14 @@ export default ({
   })
   }
 ```
+
+## Vue利用router打开新页面
+```vue
+let routeData=this.$router.resolve({
+  name:'name',
+  path:'newpage',
+  query:this.$route.query,
+  params:this.$route.params
+});
+window.open(routeData.href,'_blank');
+```
