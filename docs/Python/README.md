@@ -70,5 +70,22 @@ for i,value in enumerate(['A', 'B', 'C']):
 now = time.strftime("%Y-%m-%d %H:%M:%S")
 ```
 
+## Python动态调用函数
+```python
+def main(fun_name):
+    if globals().get(fun_name):
+        globals()[fun_name]()
+    else:
+        print('no func')
+
+def a():
+    print('a')
+
+def b():
+    print('b')
+
+main('a')
+```
+
 ## Python任务队列
 > celery
