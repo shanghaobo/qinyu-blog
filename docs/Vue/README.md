@@ -254,7 +254,7 @@ export default ({
 ```
 
 ## Vue利用router打开新页面
-```vue
+```js
 let routeData=this.$router.resolve({
   name:'name',
   path:'newpage',
