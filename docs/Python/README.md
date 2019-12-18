@@ -74,9 +74,9 @@ now = time.strftime("%Y-%m-%d %H:%M:%S")
 ```python
 def main(fun_name):
     if globals().get(fun_name):
-        globals()[fun_name]()
+        return globals()[fun_name]()
     else:
-        print('no func')
+        return 'no func'
 
 def a():
     print('a')
