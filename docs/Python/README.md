@@ -87,5 +87,19 @@ def b():
 main('a')
 ```
 
+## Python函数运行日志记录装饰器
+```python
+#函数运行日志记录装饰器
+def func_log(func):
+    def wrapper(*args,**kwargs):
+        log = public.logger #获取logger对象
+        fun_name=func.__name__
+        log.info('----------------------func-%s-begin---------------------------'%fun_name)
+        res=func(log,*args,**kwargs)
+        log.info('----------------------func-%s-end---------------------------'%fun_name)
+        return res
+    return wrapper
+```
+
 ## Python任务队列
 > celery
