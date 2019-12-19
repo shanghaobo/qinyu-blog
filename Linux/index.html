@@ -19,7 +19,7 @@
     })();
     </script>
     
-    <link rel="preload" href="/assets/css/0.styles.14d94b30.css" as="style"><link rel="preload" href="/assets/js/app.4a405874.js" as="script"><link rel="preload" href="/assets/js/3.406d0a2b.js" as="script"><link rel="preload" href="/assets/js/7.3c7c3981.js" as="script"><link rel="prefetch" href="/assets/js/1.6f86815a.js"><link rel="prefetch" href="/assets/js/10.f989912d.js"><link rel="prefetch" href="/assets/js/11.e560054b.js"><link rel="prefetch" href="/assets/js/12.64a358ed.js"><link rel="prefetch" href="/assets/js/13.d381c53c.js"><link rel="prefetch" href="/assets/js/14.7474e537.js"><link rel="prefetch" href="/assets/js/4.0ffadbc9.js"><link rel="prefetch" href="/assets/js/5.f072e904.js"><link rel="prefetch" href="/assets/js/6.f6127446.js"><link rel="prefetch" href="/assets/js/8.e445e5a3.js"><link rel="prefetch" href="/assets/js/9.9f74d939.js">
+    <link rel="preload" href="/assets/css/0.styles.14d94b30.css" as="style"><link rel="preload" href="/assets/js/app.8e9b8038.js" as="script"><link rel="preload" href="/assets/js/3.406d0a2b.js" as="script"><link rel="preload" href="/assets/js/7.bbc75a84.js" as="script"><link rel="prefetch" href="/assets/js/1.6f86815a.js"><link rel="prefetch" href="/assets/js/10.f989912d.js"><link rel="prefetch" href="/assets/js/11.e560054b.js"><link rel="prefetch" href="/assets/js/12.64a358ed.js"><link rel="prefetch" href="/assets/js/13.d381c53c.js"><link rel="prefetch" href="/assets/js/14.7474e537.js"><link rel="prefetch" href="/assets/js/4.0ffadbc9.js"><link rel="prefetch" href="/assets/js/5.f072e904.js"><link rel="prefetch" href="/assets/js/6.f6127446.js"><link rel="prefetch" href="/assets/js/8.e445e5a3.js"><link rel="prefetch" href="/assets/js/9.9f74d939.js">
     <link rel="stylesheet" href="/assets/css/0.styles.14d94b30.css">
   </head>
   <body>
@@ -81,13 +81,13 @@ flush <span class="token keyword">privileges</span><span class="token punctuatio
 <span class="token comment">#加在最后一行</span>
 <span class="token assign-left variable">lower_case_table_names</span><span class="token operator">=</span><span class="token number">1</span> 
 </code></pre></div><h2 id="linux查看磁盘空间占用"><a href="#linux查看磁盘空间占用" class="header-anchor">#</a> Linux查看磁盘空间占用</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">df</span> -h
-</code></pre></div><h2 id="mysql锁表解锁"><a href="#mysql锁表解锁" class="header-anchor">#</a> Mysql锁表解锁</h2> <ul><li>查询是否锁表</li></ul> <div class="language- extra-class"><pre class="language-text"><code>show OPEN TABLES ;
-</code></pre></div><ul><li>查询进程</li></ul> <div class="language- extra-class"><pre class="language-text"><code>show processlist ;
-</code></pre></div><ul><li>查询到相对应的进程，然后杀死进程</li></ul> <div class="language- extra-class"><pre class="language-text"><code>kill id; 
-</code></pre></div><ul><li>查看正在锁的事务</li></ul> <div class="language- extra-class"><pre class="language-text"><code>SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCKS;
-</code></pre></div><ul><li>查看等待锁的事务</li></ul> <div class="language- extra-class"><pre class="language-text"><code>SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCK_WAITS;
-</code></pre></div><ul><li>解锁表</li></ul> <div class="language- extra-class"><pre class="language-text"><code>UNLOCK TABLES;
+</code></pre></div><h2 id="mysql锁表解锁"><a href="#mysql锁表解锁" class="header-anchor">#</a> Mysql锁表解锁</h2> <ul><li>查询是否锁表</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">show</span> <span class="token keyword">OPEN</span> <span class="token keyword">TABLES</span> <span class="token punctuation">;</span>
+</code></pre></div><ul><li>查询进程</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">show</span> processlist <span class="token punctuation">;</span>
+</code></pre></div><ul><li>查询到相对应的进程，然后杀死进程</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">kill</span> id<span class="token punctuation">;</span> 
+</code></pre></div><ul><li>查看正在锁的事务</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> INFORMATION_SCHEMA<span class="token punctuation">.</span>INNODB_LOCKS<span class="token punctuation">;</span>
+</code></pre></div><ul><li>查看等待锁的事务</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> INFORMATION_SCHEMA<span class="token punctuation">.</span>INNODB_LOCK_WAITS<span class="token punctuation">;</span>
+</code></pre></div><ul><li>解锁表</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">UNLOCK</span> <span class="token keyword">TABLES</span><span class="token punctuation">;</span>
 </code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.4a405874.js" defer></script><script src="/assets/js/3.406d0a2b.js" defer></script><script src="/assets/js/7.3c7c3981.js" defer></script>
+    <script src="/assets/js/app.8e9b8038.js" defer></script><script src="/assets/js/3.406d0a2b.js" defer></script><script src="/assets/js/7.bbc75a84.js" defer></script>
   </body>
 </html>
