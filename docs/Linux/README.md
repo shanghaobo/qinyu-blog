@@ -118,3 +118,40 @@ lower_case_table_names=1
 ```bash
 df -h
 ```
+
+## Mysql锁表解锁
+- 查询是否锁表
+
+```
+show OPEN TABLES ;
+```
+
+- 查询进程
+
+```
+show processlist ;
+```
+
+- 查询到相对应的进程，然后杀死进程
+
+```
+kill id; 
+```
+
+- 查看正在锁的事务
+
+```
+SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCKS;
+```
+
+- 查看等待锁的事务
+
+```
+SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCK_WAITS;
+```
+
+- 解锁表
+
+```
+UNLOCK TABLES;
+```
