@@ -36,6 +36,7 @@ module.exports = {
     sidebarDepth: 2, // 侧边栏显示2级
   },
   plugins: [
-    'vuepress-plugin-baidu-autopush'
+    'vuepress-plugin-baidu-autopush',
+    '@vuepress/pwa'
   ]
 };
