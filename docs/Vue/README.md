@@ -263,3 +263,8 @@ let routeData=this.$router.resolve({
 });
 window.open(routeData.href,'_blank');
 ```
+
+## npm install查看详情
+```
+npm install --verbose
+```
