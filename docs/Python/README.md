@@ -103,3 +103,24 @@ def func_log(func):
 
 ## Python任务队列
 > celery
+
+## django部署后样式丢失
+1. 在项目的settings.py文件里添加以下内容：
+
+```python
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+```
+
+2. 执行下面的命令将admin的样式文件拷贝到static文件夹里
+
+```bash
+python manage.py collectstatic
+```
+
+实际就是往static文件夹里增添了两个文件夹：admin、django_extensions。
+
+3. 将新生成的static文件夹替换掉原先的文件夹。
