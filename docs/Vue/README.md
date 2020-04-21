@@ -290,3 +290,12 @@ new Vue({
   components: { App }
 })
 ```
+
+## electron安装报错解决方法
+windows在“C:\Users\username\”目录下
+macOS 在"/Users/username/"目录下
+新建 .npmrc 文件，复制内容如下：
+```
+registry=https://registry.npm.taobao.org/
+electron_mirror="https://npm.taobao.org/mirrors/electron/"
+```
