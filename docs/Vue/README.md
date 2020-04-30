@@ -299,3 +299,17 @@ macOS 在"/Users/username/"目录下
 registry=https://registry.npm.taobao.org/
 electron_mirror="https://npm.taobao.org/mirrors/electron/"
 ```
+
+## vuex的getters传参
+```js
+getters: {
+    getProductByid: (state) => (id) =>
+    {
+        return state.productList.find(item => item.id === id);
+    }
+}
+```
+- 使用
+  ```js
+  this.$store.getters.getProductByid(id);
+  ```
